@@ -4,4 +4,4 @@ A collection of the projects on my portfolio:
   - IBM: an IBM Data Science course.  
   - NLP and applied programming: course exercises from my master in AI and Language at Stockholm University.
   - Dialogue system: a project for the course "Dialogue systems" at Gothenburg University.
-  - Exploring 'jag' and 'vi' in Historical Swedish Migration Discourse.pdf: NLP project report.
+  - Exploring 'jag' and 'vi' in Historical Swedish Migration Discourse.pdf: NLP project report for my master in AI and Language at Stockholm University.
