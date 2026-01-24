@@ -1,4 +1,8 @@
 # my-projects
 A collection of the projects on my portfolio:
-  IBM: an IBM Data Science course.
-  NLP: course exercises from my master in AI and Language at Stockholm University.
+
+  - IBM: an IBM Data Science course.
+  
+  - NLP and applied programming: course exercises from my master in AI and Language at Stockholm University.
+
+  - Exploring 'jag' and 'vi' in Historical Swedish Migration Discourse.pdf: NLP project report.
