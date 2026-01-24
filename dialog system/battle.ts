@@ -891,4 +891,5 @@ export function setupButton(element: HTMLButtonElement) {
     };
     element.innerHTML = `${meta.view}`;
   });
+
 }
