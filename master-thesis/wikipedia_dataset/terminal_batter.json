@@ -1,0 +1,21 @@
+{
+  "u1s3": "Battery terminals are the electrical contacts used to connect a load or charger to a single cell or multiple-cell battery.",
+  "u2s3": "These terminals have a wide variety of designs, sizes, and features that are often not well documented.",
+  "u3s3": "== Automotive battery terminals == Automotive batteries typically have one of three types of terminals.",
+  "u4s3": "Most older Japanese cars were fitted with JIS terminals.",
+  "u5s3": "General Motors, and other automobile manufacturers, have also begun using side-post battery terminals, which consist of two recessed female 3/8\" threads (SAE 3/8-16) into which bolts or various battery terminal adapters are to be attached.",
+  "u6s3": "L terminals consist of an L-shaped post with a bolt hole through the vertical side.",
+  "u7s3": "Some batteries sizes are available with terminals in many different configurations, but two main configurations are: positive on left and negative on the right corner negative on the left and positive on the right corner.",
+  "u8s3": "Purchasing the wrong configuration may prevent battery cables from reaching the battery terminals.",
+  "u9s3": "== Marine battery terminals == Marine batteries typically have two posts, a 3/8\"-16 threaded post for the positive terminal, and a 5/16\"-18 threaded post for the negative terminal.",
+  "u10s3": "== Zinc battery terminals == Zinc battery terminals are an environmentally friendly alternative to lead battery terminals.",
+  "u11s3": "These types of battery terminals were designed as a result of environmental directives such as Proposition 65 and RoHS.",
+  "u12s3": "Zinc battery terminals offer advantages over lead alloy-type battery terminals.",
+  "u13s3": "== SLA battery terminals == The most common sizes of sealed lead acid (SLA) batteries use Faston tabs, but some larger batteries use L terminals, while some very specialized designs use other, sometimes proprietary terminals, such as older Panasonic camcorder batteries (of the type used for VHS shoulder-mounted camcorders).",
+  "u14s3": "== UPS battery terminals == Batteries designed for use inside a portable uninterruptible power supply (UPS) typically use Faston tabs, often with an adapter cable between those and the UPS's internal battery connectors.",
+  "u15s3": "Very large batteries as installed in battery rooms such as are found in datacenters use bolted connections from cell terminals to bus bars or flexible cables.",
+  "u16s3": "== Dry battery terminals == Most cylindrical dry batteries (such as the AA battery) have a projection at one end (positive) and a flat base (negative).",
+  "u17s3": "Six-volt lantern batteries typically feature two coiled, cone-shaped spring terminals, designed to mate with flat contact plates on the inside of the battery compartment.",
+  "u18s3": "Some lantern batteries instead feature screw terminals, while still others instead feature pin holes.",
+  "u19s3": "Button cell (watch batteries) have terminals as both flat sides."
+}
