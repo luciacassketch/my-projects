@@ -1,0 +1,29 @@
+This file specifies the webpages the Wikipedia data was extracted from
+for each term.
+
+• “Belt”: clothing (https://en.wikipedia.org/wiki/Belt_(clothing)),
+mechanical (https://en.wikipedia.org/wiki/Belt_(mechanical)),
+conveyor (https://en.wikipedia.org/wiki/Conveyor_belt), seat-
+belt (https://en.wikipedia.org/wiki/Seat_belt);
+• “Cell”: biological (https://en.wikipedia.org/wiki/Cell_(biology)),
+memory cell (https://en.wikipedia.org/wiki/Memory_cell_(computing)),
+prison (https://en.wikipedia.org/wiki/Prison_cell);
+• “Ground”: electricity (https://en.wikipedia.org/wiki/Ground_(electricity)),
+law (https://en.wikipedia.org/wiki/Grounds_for_divorce);
+• “Match”: firestarter (https://en.wikipedia.org/wiki/Match);
+• “Nail”: anatomical (https://en.wikipedia.org/wiki/Nail_(anatomy)),
+fastener (https://en.wikipedia.org/wiki/Nail_(fastener));
+• “Rock”: geological (https://en.wikipedia.org/wiki/Rock_(geology)),
+music genre (https://en.wikipedia.org/wiki/Rock_music);
+• “Seal”: animal (https://en.wikipedia.org/wiki/Pinniped), secu-
+rity (https://en.wikipedia.org/wiki/Security_seal), mechani-
+cal (https://en.wikipedia.org/wiki/Seal_(mechanical)), emblem
+(https://en.wikipedia.org/wiki/Seal_(emblem));
+• “Spring”: season (https://en.wikipedia.org/wiki/Spring_(season)),
+device (https://en.wikipedia.org/wiki/Spring_(device)), hydro-
+logical (https://en.wikipedia.org/wiki/Spring_(hydrology));
+• “Terminal”: computer (https://en.wikipedia.org/wiki/Computer_
+terminal), airport (https://en.wikipedia.org/wiki/Airport_terminal),
+electric (https://en.wikipedia.org/wiki/Electric_terminal), bat-
+tery (https://en.wikipedia.org/wiki/Battery_terminal).
+• “Tire”: vehicle (https://en.wikipedia.org/wiki/Tire).
