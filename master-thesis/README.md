@@ -1,11 +1,9 @@
 Welcome to my Master Thesis: _Make it make sense_ - An exploratory study on Word Sense Induction for the terminology industry.
 
-_This thesis explored various approaches to Word Sense Induction within industrial technical and noisy data. 
+"_This thesis explored various approaches to Word Sense Induction within industrial technical and noisy data. 
 Its two-level architecture first hypothesises that noun-based sentence embeddings - static and contextual - are 
 more efficient than full-sentence versions, then evaluates four methods of leveraging these embeddings against 
-two baselines._
-
-For more information, read the Abstract or the full study.
+two baselines_[...]" For more information, read the Abstract or the full study.
 
 Here, you'll also find the full analysis of the results on both datasets, and a visualization of the variance of two hyperparameters fine-tuned during the project.
 
