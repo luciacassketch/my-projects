@@ -1,11 +1,14 @@
 
 This thesis explored various approaches to Word Sense Induction within industrial technical and noisy data. 
-Its two-level architecture first hypothesises that noun-based sentence embeddings - static and contextual - are more efficient than full-sentence versions, 
-then evaluates four methods of leveraging these embeddings against two baselines. The general aim was to assess whether these solutions demonstrate robustness 
-against the noise and highly technical vocabulary characteristic of industrial data. After optimizing them on open-source Wikipedia data, the study addressed 
-the following questions: is a noun-only sentence representation more efficient than the full-sentence version? Which system performs best within each family? 
-And can those systems also perform well on customer data? The results show that noun-based static sentence representations can outperform full-sentence embeddings, 
-especially if constructed using an exponential decay method. The same remains unclear for noun-only contextual sentence embeddings. 
-The transfer of the models optimized on the Wikipedia dataset to customer data failed, proving that the latter exhibits more noise and technicality than expected. 
-Although limited by scarcity of customer data, this study highlights the potential of Word Sense Induction systems engineered to be robust against noise and 
-technical vocabulary and creates ground for further research through its findings.
+Its two-level architecture first hypothesises that noun-based sentence embeddings - static and contextual - are 
+more efficient than full-sentence versions, then evaluates four methods of leveraging these embeddings against 
+two baselines. The general aim was to assess whether these solutions demonstrate robustness against the noise and 
+highly technical vocabulary characteristic of industrial data. After optimizing them on open-source Wikipedia data, 
+the study addressed the following questions: is a noun-only sentence representation more efficient than the full-sentence 
+version? Which system performs best within each family? And can those systems also perform well on customer data? 
+The results show that noun-based static sentence representations can outperform full-sentence embeddings, especially 
+if constructed using an exponential decay method. The same remains unclear for noun-only contextual sentence embeddings. 
+The transfer of the models optimized on the Wikipedia dataset to customer data failed, proving that the latter exhibits 
+more noise and technicality than expected. Although limited by scarcity of customer data, this study highlights the 
+potential of Word Sense Induction systems engineered to be robust against noise and technical vocabulary and creates 
+ground for further research through its findings.
