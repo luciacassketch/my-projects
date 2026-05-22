@@ -1,4 +1,4 @@
-This is the directory of my Master Thesis: _Make it make sense_ - An exploratory study on Word Sense Induction for the terminology industry.
+Welcome to my Master Thesis: _Make it make sense_ - An exploratory study on Word Sense Induction for the terminology industry.
 
 Here, you'll also find the study's abstract, the full analysis of the results on both datasets, and a visualization of the variance of two hyperparameters fine-tuned during the project.
 
