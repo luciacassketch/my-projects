@@ -1,6 +1,12 @@
 Welcome to my Master Thesis: _Make it make sense_ - An exploratory study on Word Sense Induction for the terminology industry.
 
-Here, you'll also find the study's abstract, the full analysis of the results on both datasets, and a visualization of the variance of two hyperparameters fine-tuned during the project.
+_This thesis explored various approaches to Word Sense Induction within industrial technical and noisy data. 
+Its two-level architecture first hypothesises that noun-based sentence embeddings - static and contextual - are 
+more efficient than full-sentence versions, then evaluates four methods of leveraging these embeddings against 
+two baselines._ 
+For more information, read the Abstract or the full study.
+
+Here, you'll also find the full analysis of the results on both datasets, and a visualization of the variance of two hyperparameters fine-tuned during the project.
 
 This directory gathers all information needed to replicate the results presented in the thesis on the Wikipedia dataset, which you can find here together with a list of links to the webpages from where the data was extracted (wikipedia_sources). The custom datatset used in the study is private and cannot be shared.
 
