@@ -17,11 +17,11 @@ from evaluation import evaluate
 # ==============================================================================
 # 1. SPACY CONFIGURATION & CUSTOM LEMMATIZATION
 # ==============================================================================
-# Load the large English model which includes word vectors.
+# load the large English model which includes word vectors
 nlp = spacy.load('en_core_web_lg')
 _lemmatizer = nlp.get_pipe("lemmatizer")
 
-# tweak spacy's pipeline (refer to Section 3.4.2 of the thesis for details)
+# tweak spaCy's pipeline (refer to Section 3.4.2 of the thesis for details)
 @Language.component("propn_lemma_normalizer")
 def propn_lemma_normalizer(doc):
     """Re-lemmatize PROPN tokens as NOUNs via spaCy's own lemmatizer."""
@@ -42,8 +42,8 @@ nlp.add_pipe("propn_lemma_normalizer", last=True)
 # ==============================================================================
 # 2. DATA CONFIGURATION
 # ==============================================================================
-# dictionary mapping target words to their corresponding sense-specific JSON files.
 
+# dictionary mapping target words to their corresponding sense-specific JSON files
 files_dict = {
     ## example usage:
 
@@ -53,7 +53,7 @@ files_dict = {
 }
 
 
-# iterate over each target word defined in the configuration
+# iterate over each target word
 for term in files_dict:
 
     target_word = term
@@ -108,17 +108,17 @@ for term in files_dict:
                 print("\tN of sentences: ",len(list_of_keys))
 
                 # iterate over the three static models:
-                # (I didn't use range(3) because sometimes you might want to exclude 0 and 2 to test betas on 1)
+                # (I didn't use range(3) because sometimes you might want to exclude 0 and 2 to test betas on 1 and it's easy like this)
                 for f in [0, 1, 2]:     
                     
                     if f == 0:
                         print("\n\tSTATIC AVERAGE TERM POOLING:")
-                        # average vectors of context nouns only
+                        # average vectors of nouns only
                         processed_sents = static_avg_pooling(list_of_sents, target_word, target_v, nlp)
                         
                     if f == 1:
                         print("\n\tEXPONENTIAL DECAY TERM POOLING:")
-                        # weighted average based on semantic similarity to target
+                        # weighted average of nouns based on semantic similarity to target
                         processed_sents = exp_decay_pooling(list_of_sents, target_word, target_v, nlp, beta=beta)
 
                     if f == 2:
@@ -155,23 +155,23 @@ for term in files_dict:
 
         if N == 1:
 
-            # load Transformer tokenizer and model (all-MiniLM-L6-v2) ...
+            # load transformer tokenizer and model (all-MiniLM-L6-v2) ...
             model_name = "sentence-transformers/all-MiniLM-L6-v2"
             tokenizer = AutoTokenizer.from_pretrained(model_name)
             #... to access the last hidden state ...
             model = AutoModel.from_pretrained(model_name)
-            #... and to get the for full-sentence output.
+            #... and to get the full-sentence output.
             full_sentence_model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
             
             # preprocess files: load sentences, keys, and ground truth labels
             list_of_keys, list_of_sents, ground_truth = preprocess(files)
             
-            # iterate over the three static models:
+            # iterate over the three contextual models:
             for f in range(3):
 
                 if f == 0:
                     print("\n\tCONTEXTUAL AVERAGE TERM POOLING:")
-                    # average vectors of context nouns only
+                    # average vectors of nouns only
                     # (returns filtered lists due to alignment checks)
                     safe_keys, processed_sents, safe_truth = cont_avg_pooling(list_of_keys, list_of_sents, ground_truth, model, tokenizer, target_word, nlp)
 
@@ -187,17 +187,15 @@ for term in files_dict:
                     processed_sents = cont_sentence_vector(list_of_sents, full_sentence_model)
 
                 # clustering (UMAP + HDBSCAN). Parameters: 10 neighbors, min cluster size 20
-                # note: len(processed_sents) is used here instead of len(list_of_keys) as contextual models may filter sentences internally                
+                # note: len(processed_sents) is used here instead of len(list_of_keys) as contextual models may discard sentences internally                
                 predictions, mask = clustering(processed_sents, len(processed_sents))
                 masked_predictions = np.array(predictions)[mask]
 
                 print("\t\tN of sentences with clear sense detected: ",len(masked_predictions))
                 
-                # apply mask to filter out noise/outliers identified by HDBSCAN but you need to
-                # select the correct lists for evaluation based on whether internal filtering occurred
-                # (it does not occurr in Cont. Sentence Vector)
+                # apply mask to filter out noise/outliers identified by HDBSCAN but you need to select the correct lists for evaluation 
+                # based on whether internal filtering occurred (it does not occurr in Cont. Sentence Vector)
                 if f in [0,1]:
-
                     masked_list_of_keys = np.array(safe_keys)[mask]
                     masked_truth = np.array(safe_truth)[mask]
 
@@ -207,7 +205,6 @@ for term in files_dict:
                     V, F = evaluate(masked_predictions, masked_truth)
 
                 else:
-
                     masked_list_of_keys = np.array(list_of_keys)[mask]
                     masked_truth = np.array(ground_truth)[mask]
 
