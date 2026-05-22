@@ -27,7 +27,7 @@ def static_avg_pooling(sentences: list, target_word, target_v, nlp):
 
         embeddings = []
 
-        # find all nouns (excluding the target) as save their vector
+        # find all nouns (excluding the target) and save their vector
         for t in doc:
             if t.pos_ == "NOUN" and t.lemma_.lower() != target_word:
                 embeddings.append(t.vector)
@@ -96,7 +96,7 @@ def static_sentence_vector(sentences: list, target_v, nlp):
 
 
 
-def exp_decay_pooling(sentences: list, target_word, target_v, nlp, alpha = 0.6):
+def exp_decay_pooling(sentences: list, target_word, target_v, nlp, alpha = 2.0):
     """
     Generates sentence embeddings using a weighted average based on semantic 
     similarity to the target.
@@ -106,8 +106,7 @@ def exp_decay_pooling(sentences: list, target_word, target_v, nlp, alpha = 0.6):
         target_word (str): The lemma of the target word.
         target_v (np.ndarray): The vector representation of the target word.
         nlp: The loaded spaCy NLP model.
-        alpha (float, optional): The scaling factor for the exponential weighting. 
-                                Defaults to 0.6.
+        alpha (float, optional): The scaling factor for the exponential weighting. Defaults to 2.0.
 
     Returns:
         np.ndarray: An array of weighted embedding vectors, one per sentence.
@@ -123,12 +122,12 @@ def exp_decay_pooling(sentences: list, target_word, target_v, nlp, alpha = 0.6):
 
         embeddings = []
         
-        # find all nouns and retrieve their vectors
+        # find all nouns (excluding the target) and retrieve their vectors
         for t in doc:
             if t.pos_ == "NOUN" and t.lemma_.lower() != target_word:
                 embeddings.append(t.vector)
 
-        # fallback for when no words are found 
+        # fallback for when no nouns are found 
         if not embeddings:
             transformed_sents.append(target_v)
             mask.append(y)
@@ -143,7 +142,7 @@ def exp_decay_pooling(sentences: list, target_word, target_v, nlp, alpha = 0.6):
         # calculate weights with similarity-based exponential function
         weights = np.exp(alpha * np.array(similarities)) 
 
-        # normalizing weights to sum up to 1 and so the output is a weighted average not sum
+        # normalizing weights to sum up to 1 so the output is a weighted average not a sum
         total_weight = np.sum(weights)
         weights = weights / total_weight
 
