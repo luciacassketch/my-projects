@@ -4,7 +4,7 @@ Here, you'll also find the study's abstract, the full analysis of the results on
 
 This directory gathers all information needed to replicate the results presented in the thesis on the Wikipedia dataset, which you can find here together with a list of links to the webpages from where the data was extracted (wikipedia_sources). The custom datatset used in the study is private and cannot be shared.
 
-In the "code" sub-directory you'll find all the code needed to run the pipeline I wrote. This code is made public with the license CC BY-NC (visit this website for an explanation of the license: https://creativecommons.org/licenses/by-nc/4.0/).
+In the "code" sub-directory you'll find all the code needed to run the pipeline I wrote. This code is made public under the CC BY-NC license (visit this website for an explanation of the license: https://creativecommons.org/licenses/by-nc/4.0/).
 The coding environment I used is the following:
 - Python 3.11.9
 - SpaCy 3.8.11
