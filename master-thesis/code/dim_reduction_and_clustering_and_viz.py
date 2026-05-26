@@ -17,8 +17,8 @@ def clustering(transformed_sents, n_sents, neighbours, hdb_min_cluster_size, hdb
 
     Returns:
         tuple:
-            - clusters (np.ndarray): The cluster labels assigned by HDBSCAN.
-            - mask (list): A list of indices corresponding to non-noisy points, needed to later filter the corpus of sentences.
+            clusters (np.ndarray): The cluster labels assigned by HDBSCAN.
+            mask (list): A list of indices corresponding to non-noisy points, needed to later filter the corpus of sentences.
     """
 
     ## dimensionality reduction with UMAP
