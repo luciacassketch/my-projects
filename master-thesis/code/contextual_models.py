@@ -18,9 +18,9 @@ def cont_avg_pooling(list_of_keys, list_of_sentences, ground_truth, model, token
         nlp: The loaded spaCy NLP model for POS tagging and lemmatization.
 
     Returns:
-            - list_of_keys (list): Filtered list of keys (removed masked entries).
-            - X (np.ndarray): Array of computed context embeddings.
-            - ground_truth (list): Filtered list of ground truth labels.
+            list_of_keys (list): Filtered list of keys (removed masked entries).
+            X (np.ndarray): Array of computed context embeddings.
+            ground_truth (list): Filtered list of ground truth labels.
     """
 
     embeddings = []
@@ -189,10 +189,10 @@ def only_target_vector(list_of_keys, list_of_sentences, ground_truth, model, tok
         nlp: The loaded spaCy NLP model.
 
     Returns:
-        tuple: A tuple containing:
-            - list_of_keys (list): Filtered list of keys.
-            - X (np.ndarray): Array of target word embeddings only.
-            - ground_truth (list): Filtered list of ground truth labels.
+        tuple:
+            list_of_keys (list): Filtered list of keys.
+            X (np.ndarray): Array of target word embeddings only.
+            ground_truth (list): Filtered list of ground truth labels.
     """
 
     embeddings = []
