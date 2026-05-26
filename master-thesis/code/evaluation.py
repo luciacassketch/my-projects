@@ -63,7 +63,7 @@ def paired_f_score(y_true, y_pred):
     n_gold = len(gold_pairs)
     
     if n_pred == 0 and n_gold == 0:
-        return 1.0  # Edge case: no data or all singletons, we consider it perfect
+        return 1.0  # edge case: no data or all singletons, we consider it perfect
             
     if n_pred == 0:
         precision = 0.0
@@ -95,8 +95,8 @@ def evaluate(predictions, ground_truth):
 
     Returns:
         tuple:
-            - v_measure (float): The V-Measure score.
-            - f_score (float): The Paired F-Score.
+            v_measure (float): The V-Measure score.
+            f_score (float): The Paired F-Score.
     """
 
     v_measure = vm(ground_truth, predictions)
