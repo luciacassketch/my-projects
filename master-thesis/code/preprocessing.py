@@ -24,7 +24,7 @@ def preprocess(files: list):
         with open(file, "r", encoding="utf-8") as f:
             dictionary = json.load(f)
         
-        if dictionary:  # sanitary check
+        if dictionary:  # sanity check
             
             # the whole file gets saved back into a dict 
             keys_to_sents.update(dictionary)
