@@ -7,7 +7,7 @@ two baselines_[...]". For more information, read the Abstract or the full study.
 
 To cite the study, visit this page: http://su.diva-portal.org/smash/record.jsf?pid=diva2:2070367 .
 
-Here, you'll also find the full analysis of the results on both datasets, and a visualization of the variance of two hyperparameters fine-tuned during the project.
+Here on GitHub you'll also find the full analysis of the results on both datasets, and a visualization of the variance of two hyperparameters fine-tuned during the project.
 
 This directory gathers all information needed to replicate the results presented in the thesis on the Wikipedia dataset, which you can find here together with a list of links to the webpages from where the data was extracted (wikipedia_sources). The custom datatset used in the study is private and cannot be shared.
 
